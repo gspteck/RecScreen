@@ -50,6 +50,7 @@ async function startRecording() {
 
     save.addEventListener('click', () => {
       downloadBlob(completeBlob, 'myvideo.mp4');
+      
     })
   };
   

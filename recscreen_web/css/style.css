@@ -70,3 +70,19 @@ video {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+
+#warning {
+    width: 50%;
+    height: 100px;
+    background: #202020;
+    border: #646464;
+}
+
+
+
+#timer {
+    font-size: 25px;
+    position: absolute;
+}

@@ -1,7 +1,28 @@
 # RecScreen
 
-RecSreen in a web-based screen recorder created for all the people that don't feel like downloading a third party software 
-to record your screen.
+RecSreen in a web-based screen recorder created for all the people that don't feel like downloading a third party software to record their screen directly from the browser.
+
+### Prerequisites
+
+* It's recommended to have basic knowledge of HTML, CSS and JavaScript code.
+* There is no specific operating system that should be used to work with this code.
+
+### Installation
+
+##### For Users
+
++ [WEB]() (not available at the moment).
++ [Windows]() (not available at the moment).
++ [Linux]() (not available at the moment).
++ [Android]() (not available at the moment).
+
+##### For Devs
+
+'git clone https://github.com/gspteck/RecScreen.git'
+
+## Licence
+
+RecScreen is under the [MIT Lisence](https://raw.githubusercontent.com/gspteck/RecScreen/main/LICENSE).
 
 ## Other
 
