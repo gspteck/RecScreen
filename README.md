@@ -22,7 +22,7 @@ RecSreen in a web-based screen recorder created for all the people that don't fe
 
 ## Licence
 
-RecScreen is under the [MIT Lisence](https://raw.githubusercontent.com/gspteck/RecScreen/main/LICENSE).
+RecScreen is under the [MIT License](https://raw.githubusercontent.com/gspteck/RecScreen/main/LICENSE).
 
 ## Other
 
