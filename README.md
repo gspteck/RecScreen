@@ -18,7 +18,7 @@ RecSreen in a web-based screen recorder created for all the people that don't fe
 
 ##### For Devs
 
-'git clone https://github.com/gspteck/RecScreen.git'
+'''git clone https://github.com/gspteck/RecScreen.git'''
 
 ## Licence
 
