@@ -39,7 +39,7 @@ async function startRecording() {
 
     
     download.addEventListener("click", () => {
-      downloadBlob(completeBlob, 'myvideo.mp4');
+      downloadBlob(completeBlob, 'myvideo.flv');
     })
   };
   startTimer();
@@ -129,7 +129,7 @@ function timerCycle() {
       min = min + 1;
       sec = 0;
     }
-    else if (min == 60) {
+    if (min == 60) {
       hr = hr + 1;
       min = 0;
       sec = 0;
