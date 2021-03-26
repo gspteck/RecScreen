@@ -17,11 +17,12 @@ async function startRecording() {
   stream = await navigator.mediaDevices.getDisplayMedia({
     video: {
       mediaSource: "screen",
+      cursor: 'never',
     },
     audio: {
       echoCancellation: true,
       noiseSuppression: true,
-      sampleRate: 44100
+      sampleRate: 44100,
     }
   });
   recorder = new MediaRecorder(stream);
