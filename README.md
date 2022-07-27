@@ -34,11 +34,11 @@ We will review it and try our best to fix the code.
 
 Want to support us?
 
-BTC: 1qTAq1nMrtMzAZzAYzBMkZhbmcgANT7rB
+BTC: 1Q1ZFsZCXhan1QG9Su1S9xEX75WpecYE3C
 
-ETH: 0x17E0a2AE9C4Ff4555E62A34eF7E0b21e88935b51
+ETH: 0x3F21aBAd969f9c8B18975B8cb9f039569bF10f0D
 
-BCH: qq5gnn2dyeex4rpjqauqu7m7jk0vjq09puxhhduz4y
+BCH: bitcoincash:qrdv0y0lgasxs39kwmuvglsduztvmpcrhc24t68p8a
 
 PayPal: [gspteck@gmail.com](https://paypal.me/gspteck)
 
